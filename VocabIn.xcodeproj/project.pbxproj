@@ -7,19 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE03393929009407002AE68A /* WordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE03393829009407002AE68A /* WordManager.swift */; };
+		CE2A257C29033049000E3060 /* WordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A257B29033049000E3060 /* WordData.swift */; };
+		CE59C7E428F74A490041BCAD /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59C7E028F74A490041BCAD /* SearchVC.swift */; };
+		CE59C7E528F74A490041BCAD /* TagsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59C7E228F74A490041BCAD /* TagsVC.swift */; };
+		CE59C7E628F74A490041BCAD /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59C7E128F74A490041BCAD /* SignInVC.swift */; };
+		CE59C7E728F74A490041BCAD /* ReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59C7E328F74A490041BCAD /* ReviewVC.swift */; };
+		CE59C7E828F74A490041BCAD /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59C7DF28F74A490041BCAD /* HomeVC.swift */; };
+		CE59C7E928F74A490041BCAD /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59C7DD28F74A490041BCAD /* WebViewVC.swift */; };
+		CE59C7EA28F74A490041BCAD /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59C7DE28F74A490041BCAD /* SettingsVC.swift */; };
+		CE59C7EB28F74A490041BCAD /* ChooseSetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59C7DC28F74A490041BCAD /* ChooseSetVC.swift */; };
 		CE95658728E08E2D00E84B39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95658628E08E2D00E84B39 /* AppDelegate.swift */; };
 		CE95658928E08E2D00E84B39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95658828E08E2D00E84B39 /* SceneDelegate.swift */; };
-		CE95658B28E08E2D00E84B39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95658A28E08E2D00E84B39 /* ViewController.swift */; };
 		CE95658E28E08E2D00E84B39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE95658C28E08E2D00E84B39 /* Main.storyboard */; };
 		CE95659028E08E2F00E84B39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE95658F28E08E2F00E84B39 /* Assets.xcassets */; };
 		CE95659328E08E2F00E84B39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE95659128E08E2F00E84B39 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE03393829009407002AE68A /* WordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordManager.swift; sourceTree = "<group>"; };
+		CE2A257B29033049000E3060 /* WordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordData.swift; sourceTree = "<group>"; };
+		CE59C7DC28F74A490041BCAD /* ChooseSetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseSetVC.swift; sourceTree = "<group>"; };
+		CE59C7DD28F74A490041BCAD /* WebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
+		CE59C7DE28F74A490041BCAD /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		CE59C7DF28F74A490041BCAD /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		CE59C7E028F74A490041BCAD /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		CE59C7E128F74A490041BCAD /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		CE59C7E228F74A490041BCAD /* TagsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsVC.swift; sourceTree = "<group>"; };
+		CE59C7E328F74A490041BCAD /* ReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVC.swift; sourceTree = "<group>"; };
 		CE95658328E08E2D00E84B39 /* VocabIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocabIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE95658628E08E2D00E84B39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE95658828E08E2D00E84B39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE95658A28E08E2D00E84B39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE95658D28E08E2D00E84B39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE95658F28E08E2F00E84B39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE95659228E08E2F00E84B39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,9 +55,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE03393A29009413002AE68A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CE03393829009407002AE68A /* WordManager.swift */,
+				CE2A257B29033049000E3060 /* WordData.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CE59C7DB28F749B50041BCAD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE95658C28E08E2D00E84B39 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE59C7EC28F74A5D0041BCAD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE59C7DC28F74A490041BCAD /* ChooseSetVC.swift */,
+				CE59C7DF28F74A490041BCAD /* HomeVC.swift */,
+				CE59C7E328F74A490041BCAD /* ReviewVC.swift */,
+				CE59C7E028F74A490041BCAD /* SearchVC.swift */,
+				CE59C7DE28F74A490041BCAD /* SettingsVC.swift */,
+				CE59C7E128F74A490041BCAD /* SignInVC.swift */,
+				CE59C7E228F74A490041BCAD /* TagsVC.swift */,
+				CE59C7DD28F74A490041BCAD /* WebViewVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		CE95657A28E08E2D00E84B39 = {
 			isa = PBXGroup;
 			children = (
+				CE03393A29009413002AE68A /* Networking */,
 				CE95658528E08E2D00E84B39 /* VocabIn */,
 				CE95658428E08E2D00E84B39 /* Products */,
 			);
@@ -58,8 +109,8 @@
 			children = (
 				CE95658628E08E2D00E84B39 /* AppDelegate.swift */,
 				CE95658828E08E2D00E84B39 /* SceneDelegate.swift */,
-				CE95658A28E08E2D00E84B39 /* ViewController.swift */,
-				CE95658C28E08E2D00E84B39 /* Main.storyboard */,
+				CE59C7DB28F749B50041BCAD /* Views */,
+				CE59C7EC28F74A5D0041BCAD /* Controllers */,
 				CE95658F28E08E2F00E84B39 /* Assets.xcassets */,
 				CE95659128E08E2F00E84B39 /* LaunchScreen.storyboard */,
 				CE95659428E08E2F00E84B39 /* Info.plist */,
@@ -138,9 +189,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE95658B28E08E2D00E84B39 /* ViewController.swift in Sources */,
+				CE59C7E428F74A490041BCAD /* SearchVC.swift in Sources */,
+				CE59C7E828F74A490041BCAD /* HomeVC.swift in Sources */,
 				CE95658728E08E2D00E84B39 /* AppDelegate.swift in Sources */,
 				CE95658928E08E2D00E84B39 /* SceneDelegate.swift in Sources */,
+				CE59C7E928F74A490041BCAD /* WebViewVC.swift in Sources */,
+				CE59C7E528F74A490041BCAD /* TagsVC.swift in Sources */,
+				CE59C7E728F74A490041BCAD /* ReviewVC.swift in Sources */,
+				CE03393929009407002AE68A /* WordManager.swift in Sources */,
+				CE59C7E628F74A490041BCAD /* SignInVC.swift in Sources */,
+				CE59C7EB28F74A490041BCAD /* ChooseSetVC.swift in Sources */,
+				CE59C7EA28F74A490041BCAD /* SettingsVC.swift in Sources */,
+				CE2A257C29033049000E3060 /* WordData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

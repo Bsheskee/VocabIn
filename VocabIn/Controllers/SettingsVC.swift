@@ -1,13 +1,13 @@
 //
-//  ViewController.swift
+//  SettingsVC.swift
 //  VocabIn
 //
-//  Created by bartek on 25/09/2022.
+//  Created by bartek on 09/10/2022.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class SettingsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,4 +16,3 @@ class ViewController: UIViewController {
 
 
 }
-
