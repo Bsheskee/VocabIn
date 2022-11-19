@@ -13,17 +13,8 @@ import Foundation
 //}
 
 class WordManager {
-    
-//    let wordURL = "https://api.dictionaryapi.dev/api/v2/entries/en/" //część wspólna
-    
-//    var delegate: WordManagerDelegate?
-//    var wordData = [WordData]()
-    
-//    func fetchWord(word: String) {
-////        let urlString = "\(wordURL)\(word)"
-//        performRequest(urlString: urlString)
-//    }
-    
+    //var entries = [Definitions]()
+    //([WordData]), [Definitions])
     func performRequest(word: String, comp: @escaping ([WordData])-> Void) {
         let wordURL = "https://api.dictionaryapi.dev/api/v2/entries/en/"
         let urlString = "\(wordURL)\(word)"
@@ -38,9 +29,9 @@ class WordManager {
 
                 do {
                     let decoded = try JSONDecoder().decode([WordData].self, from: data)
-//                    print(decoded[0].meanings)
+//                    print(decoded[0].meanings[0].definitions[0])
                     comp(decoded)
-
+                    //comp(decoded, entries.self)
                 } catch {
                     print("Error occured while decoding JSON into Swift structure \(error)")
                 }

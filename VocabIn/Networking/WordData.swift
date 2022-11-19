@@ -7,16 +7,20 @@
 
 import UIKit
 
+//enum CellModel {
+//    case
+//}
 
 struct WordData: Codable {
     let word: String?
+    let phonetic: String?
     let meanings: [Meanings]
+    
 }
 
 struct Meanings: Codable {
-
-    let partOfSpeech: String
     let definitions: [Definitions]
+    let partOfSpeech: String
 }
 
 struct Definitions: Codable {
