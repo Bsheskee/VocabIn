@@ -1,14 +1,18 @@
 //
-//  AntoSynCell.swift
+//  pOsCell.swift
 //  VocabIn
 //
-//  Created by bartek on 13/11/2022.
+//  Created by bartek on 26/11/2022.
 //
 
 import UIKit
 
-class SynDefCell: UITableViewCell {
+class pOsCell: UITableViewCell {
 
+    
+    @IBOutlet weak var partOfSpeech: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -10,6 +10,7 @@ import UIKit
 class FirstDefinitionCell: UITableViewCell {
 
     @IBOutlet weak var exampleLabel: UILabel!
+    @IBOutlet weak var partOfSpeech: UILabel!
     
     @IBOutlet weak var entryName: UILabel!
     

@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE024D63293288F10025EEF4 /* pOsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE024D61293288F10025EEF4 /* pOsCell.swift */; };
+		CE024D64293288F10025EEF4 /* pOsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE024D62293288F10025EEF4 /* pOsCell.xib */; };
 		CE03393929009407002AE68A /* WordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE03393829009407002AE68A /* WordManager.swift */; };
 		CE1D631329217E8C00C56955 /* DefinitionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D631129217E8C00C56955 /* DefinitionCell.swift */; };
 		CE1D631429217E8C00C56955 /* DefinitionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1D631229217E8C00C56955 /* DefinitionCell.xib */; };
-		CE1D63172921851F00C56955 /* SynDefCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D63152921851F00C56955 /* SynDefCell.swift */; };
-		CE1D63182921851F00C56955 /* SynDefCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1D63162921851F00C56955 /* SynDefCell.xib */; };
+		CE1D63172921851F00C56955 /* SynAntonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D63152921851F00C56955 /* SynAntonCell.swift */; };
+		CE1D63182921851F00C56955 /* SynAntonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1D63162921851F00C56955 /* SynAntonCell.xib */; };
 		CE2A257C29033049000E3060 /* WordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A257B29033049000E3060 /* WordData.swift */; };
 		CE59C7E428F74A490041BCAD /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59C7E028F74A490041BCAD /* SearchVC.swift */; };
 		CE59C7E528F74A490041BCAD /* TagsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59C7E228F74A490041BCAD /* TagsVC.swift */; };
@@ -34,11 +36,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE024D61293288F10025EEF4 /* pOsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pOsCell.swift; sourceTree = "<group>"; };
+		CE024D62293288F10025EEF4 /* pOsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = pOsCell.xib; sourceTree = "<group>"; };
 		CE03393829009407002AE68A /* WordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordManager.swift; sourceTree = "<group>"; };
 		CE1D631129217E8C00C56955 /* DefinitionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionCell.swift; sourceTree = "<group>"; };
 		CE1D631229217E8C00C56955 /* DefinitionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefinitionCell.xib; sourceTree = "<group>"; };
-		CE1D63152921851F00C56955 /* SynDefCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynDefCell.swift; sourceTree = "<group>"; };
-		CE1D63162921851F00C56955 /* SynDefCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SynDefCell.xib; sourceTree = "<group>"; };
+		CE1D63152921851F00C56955 /* SynAntonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynAntonCell.swift; sourceTree = "<group>"; };
+		CE1D63162921851F00C56955 /* SynAntonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SynAntonCell.xib; sourceTree = "<group>"; };
 		CE2A257B29033049000E3060 /* WordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordData.swift; sourceTree = "<group>"; };
 		CE59C7DC28F74A490041BCAD /* ChooseSetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseSetVC.swift; sourceTree = "<group>"; };
 		CE59C7DD28F74A490041BCAD /* WebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
@@ -92,8 +96,10 @@
 				CE8B99D42917F245006D3D41 /* DefExampleCell.xib */,
 				CE1D631129217E8C00C56955 /* DefinitionCell.swift */,
 				CE1D631229217E8C00C56955 /* DefinitionCell.xib */,
-				CE1D63152921851F00C56955 /* SynDefCell.swift */,
-				CE1D63162921851F00C56955 /* SynDefCell.xib */,
+				CE1D63152921851F00C56955 /* SynAntonCell.swift */,
+				CE1D63162921851F00C56955 /* SynAntonCell.xib */,
+				CE024D61293288F10025EEF4 /* pOsCell.swift */,
+				CE024D62293288F10025EEF4 /* pOsCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,9 +220,10 @@
 				CE7BBCC42914447E00F78BFD /* FirstDefinitionCell.xib in Resources */,
 				CE8B99D62917F245006D3D41 /* DefExampleCell.xib in Resources */,
 				CE95659328E08E2F00E84B39 /* LaunchScreen.storyboard in Resources */,
-				CE1D63182921851F00C56955 /* SynDefCell.xib in Resources */,
+				CE1D63182921851F00C56955 /* SynAntonCell.xib in Resources */,
 				CE95659028E08E2F00E84B39 /* Assets.xcassets in Resources */,
 				CE1D631429217E8C00C56955 /* DefinitionCell.xib in Resources */,
+				CE024D64293288F10025EEF4 /* pOsCell.xib in Resources */,
 				CE95658E28E08E2D00E84B39 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,8 +239,9 @@
 				CE59C7E828F74A490041BCAD /* HomeVC.swift in Sources */,
 				CEADA1FD29183480005C98CC /* Test.swift in Sources */,
 				CE95658728E08E2D00E84B39 /* AppDelegate.swift in Sources */,
-				CE1D63172921851F00C56955 /* SynDefCell.swift in Sources */,
+				CE1D63172921851F00C56955 /* SynAntonCell.swift in Sources */,
 				CE1D631329217E8C00C56955 /* DefinitionCell.swift in Sources */,
+				CE024D63293288F10025EEF4 /* pOsCell.swift in Sources */,
 				CE95658928E08E2D00E84B39 /* SceneDelegate.swift in Sources */,
 				CE59C7E928F74A490041BCAD /* WebViewVC.swift in Sources */,
 				CE7BBCC32914447E00F78BFD /* FirstDefinitionCell.swift in Sources */,

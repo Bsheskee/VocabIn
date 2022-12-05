@@ -15,12 +15,12 @@ struct WordData: Codable {
     let word: String?
     let phonetic: String?
     let meanings: [Meanings]
-    
 }
 
 struct Meanings: Codable {
     let definitions: [Definitions]
-    let partOfSpeech: String
+    let partOfSpeech: String?
+    let synonyms: [String]?
 }
 
 struct Definitions: Codable {
@@ -29,6 +29,18 @@ struct Definitions: Codable {
 }
 
 
+
+//struct Antynoms: Codable {
+//    let antonyms: [String]?
+//}
+
+//struct DictionaryCell {
+//    var wordData = [WordData]()
+//    
+//    func configure(entriesCount: [WordData]) {
+//        if entriesCount == wordData[0].meanings.count
+//    }
+//}
 
 
 
