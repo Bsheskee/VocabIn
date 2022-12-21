@@ -14,9 +14,12 @@ import UIKit
 struct WordData: Codable {
     let word: String?
     let phonetic: String?
+    let phonetics: [Phonetics]
     let meanings: [Meanings]
 }
-
+struct Phonetics: Codable {
+    let audio: String?
+}
 struct Meanings: Codable {
     let definitions: [Definitions]
     let partOfSpeech: String?

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import AVFoundation
 
 class SearchVC: UIViewController {
     
@@ -21,6 +21,9 @@ class SearchVC: UIViewController {
     var cellsCount = 0
     var cell = UITableViewCell()
     
+    public var audioUrl = URL(string: "")
+    var player: AVPlayer?
+    var word = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -174,18 +177,67 @@ extension SearchVC: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         // { (data: [WordData], [Definitions])
-        if let word = searchBar.text {
-            wordManager.performRequest(word: word) { data in
-                self.wordData = data
-                self.searchButtonPressed = true
-                //                print(data)
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
+        word = searchBar.text!
+        wordManager.performRequest(word: word) { data in
+            self.wordData = data
+            self.searchButtonPressed = true
+            //                print(data)
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
         }
-        //        filtering and sorting methods + tableView.reloadData()
+        fetchAudio(word: word) { data in
+            DispatchQueue.main.async {
+                self.wordData = data
+            }
+        }
     }
+    
+    func fetchAudio(word: String, comp: @escaping ([WordData])-> Void) {
+        let wordURL = "https://api.dictionaryapi.dev/api/v2/entries/en/"
+        let urlString = "\(wordURL)\(word)"
+        
+        if let url = URL(string: urlString) {
+            let dataTask = URLSession.shared.dataTask(with: url, completionHandler: {
+                (data,response,error) in
+                guard let data = data, error == nil else {
+                    print("Error occured while accessing data with URL")
+                    return
+                }
+                
+                do {
+                    let decoded = try JSONDecoder().decode([WordData].self, from: data)
+                    comp(decoded)
+                    if let sound = decoded[0].phonetics[0].audio,
+                       let sound2 = decoded[0].phonetics[1].audio {
+                        print("sound = \(sound)")
+                        let nonEmpty = (sound != "") ? sound : sound2 //write switch cases or another ternary with more urls to choose from if both are empty
+                        self.audioUrl = URL(string: nonEmpty)
+                        //            url = URL(string: sound2)
+                        
+                        do {
+                            try AVAudioSession.sharedInstance().setMode(.default)
+                            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+                            
+                            self.player = AVPlayer(url: self.audioUrl!)
+                            
+                            guard let player = self.player else { return }
+                            
+                            player.play()
+                        } catch let error {
+                            print(error.localizedDescription)
+                        }
+                        
+                    }
+                    //comp(decoded, entries.self)
+                } catch {
+                    print("Error occured while decoding JSON into Swift structure \(error)")
+                }
+            })
+            dataTask.resume()
+        }
+    }
+
     //    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
     //        if searchBar.text?.count == 0 {
     ////            populate the data with the default value
