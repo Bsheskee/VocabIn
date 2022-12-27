@@ -17,13 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        
-        if AuthManager.shared.isSignedIn {
-            window.rootViewController = HomeVC()
-        } else {
-            window.rootViewController = UINavigationController(rootViewController: WelcomeViewController())
-        }
+//        let window = UIWindow(frame: UIScreen.main.bounds)
+//        
+//        if AuthManager.shared.isSignedIn {
+//            window.rootViewController = UINavigationController(rootViewController: WelcomeViewController())
+//        } else {
+//            window.rootViewController = HomeVC()
+//        }
         
         return true
     }

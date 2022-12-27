@@ -209,7 +209,7 @@ extension SearchVC: UISearchBarDelegate {
                     let decoded = try JSONDecoder().decode([WordData].self, from: data)
                     comp(decoded)
                     if let sound = decoded[0].phonetics[0].audio,
-                       let sound2 = decoded[0].phonetics[1].audio {
+                       let sound2 = decoded[0].phonetics[safe: 1]?.audio {
                         print("sound = \(sound)")
                         let nonEmpty = (sound != "") ? sound : sound2 //write switch cases or another ternary with more urls to choose from if both are empty
                         self.audioUrl = URL(string: nonEmpty)

@@ -36,6 +36,7 @@
 		CE95659328E08E2F00E84B39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE95659128E08E2F00E84B39 /* LaunchScreen.storyboard */; };
 		CEADA1FD29183480005C98CC /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADA1FC29183480005C98CC /* Test.swift */; };
 		CEB351472947D09100E42F89 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB351462947D09100E42F89 /* AuthManager.swift */; };
+		CED4DF952958783900837B25 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4DF942958783900837B25 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		CE95659428E08E2F00E84B39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEADA1FC29183480005C98CC /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		CEB351462947D09100E42F89 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		CED4DF942958783900837B25 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				CE59C7DB28F749B50041BCAD /* Views */,
 				CE59C7EC28F74A5D0041BCAD /* Controllers */,
 				CE95658F28E08E2F00E84B39 /* Assets.xcassets */,
+				CED4DF942958783900837B25 /* Constants.swift */,
 				CE95659128E08E2F00E84B39 /* LaunchScreen.storyboard */,
 				CE95659428E08E2F00E84B39 /* Info.plist */,
 				CE0F3574294FAB62003A4617 /* GoogleService-Info.plist */,
@@ -265,6 +268,7 @@
 				CE03393929009407002AE68A /* WordManager.swift in Sources */,
 				CE59C7E628F74A490041BCAD /* WelcomeViewController.swift in Sources */,
 				CEB351472947D09100E42F89 /* AuthManager.swift in Sources */,
+				CED4DF952958783900837B25 /* Constants.swift in Sources */,
 				CE59C7EB28F74A490041BCAD /* ChooseSetVC.swift in Sources */,
 				CE59C7EA28F74A490041BCAD /* SettingsVC.swift in Sources */,
 				CE2A257C29033049000E3060 /* WordData.swift in Sources */,
