@@ -22,21 +22,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func configureInitialViewController() {
-           var initialViewController = UIViewController()
+           let initialViewController: UIViewController
            let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
            window = UIWindow()
-        Auth.auth().addStateDidChangeListener { auth, user in
-            if user != nil {
-                print("user = \(user)")
-                let mainViewController = storyboard.instantiateViewController(withIdentifier: "SearchVC")
-                initialViewController = mainViewController
-            } else {
-                let loginViewController = storyboard.instantiateViewController(withIdentifier: K.welcomeVC) as! UINavigationController
-                initialViewController = loginViewController
-            }
-        }
-      
+    
+           if Auth.auth().currentUser != nil {
+               print("Current user = \(Auth.auth().currentUser)")
+               let mainViewController = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController")
+               initialViewController = mainViewController
+           } else {
+               let loginViewController = storyboard.instantiateViewController(withIdentifier: "SearchVC")
+               initialViewController = loginViewController
+           }
            window?.rootViewController = initialViewController
            window?.makeKeyAndVisible()
        }
