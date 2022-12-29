@@ -9,5 +9,6 @@ import Foundation
 
 struct K {
     static let signInSegue = "goToDictionary"
+    static let welcomeVC = "WelcomeViewController"
 //    static let loginSegue = "LoginToDictionary"
 }
