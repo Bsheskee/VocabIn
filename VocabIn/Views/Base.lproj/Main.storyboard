@@ -11,7 +11,7 @@
         <!--WelcomeViewController-->
         <scene sceneID="rjk-Qj-3ol">
             <objects>
-                <viewController title="WelcomeViewController" id="ezX-C5-4wV" customClass="WelcomeViewController" customModule="VocabIn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeViewController" title="WelcomeViewController" id="ezX-C5-4wV" customClass="WelcomeViewController" customModule="VocabIn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rp7-Yd-I1N">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -586,7 +586,7 @@
         <!--Searchview-->
         <scene sceneID="a9S-c4-cRE">
             <objects>
-                <viewController title="Searchview" id="2hx-IB-E1q" userLabel="Searchview" customClass="SearchVC" customModule="VocabIn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchVC" title="Searchview" id="2hx-IB-E1q" userLabel="Searchview" customClass="SearchVC" customModule="VocabIn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aF4-ls-QY3">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -34,10 +34,20 @@ class WelcomeViewController: UIViewController {
                 print(e.localizedDescription)
             } else {
                 self.performSegue(withIdentifier: K.signInSegue, sender: self)
+                AuthManager.shared.isSignedIn = true
+               
             }
             }
         }
     }
     
     
+}
+
+final class AuthManager {
+    static let shared = AuthManager()
+    
+    private init() {}
+    
+    var isSignedIn = false
 }

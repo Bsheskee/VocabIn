@@ -6,22 +6,18 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var appDelegate = AppDelegate()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
-//        guard let windowScene = (scene as? UIWindowScene) else { return }
-//        let window = UIWindow(windowScene:  windowScene)
-//        if AuthManager.shared.isSignedIn {
-//            window.rootViewController = HomeVC()
-//        } else {
-//            window.rootViewController = UINavigationController(rootViewController: WelcomeViewController())
-//        }
-//        self.window = window
+  
+        guard let _ = (scene as? UIWindowScene) else { return }
+        appDelegate.configureInitialViewController()
+
         
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -60,3 +56,40 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+//let authListener = Auth.auth().addStateDidChangeListener { auth, user in
+//    if user != nil {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "SearchVC")
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        self.window?.rootViewController = vc
+//        self.window?.makeKeyAndVisible()
+//    } else {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController")
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        self.window?.rootViewController = vc
+//        self.window?.makeKeyAndVisible()
+//    }
+//}
+
+//        self.window = UIWindow(windowScene: scene as! UIWindowScene)
+//        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+//        var viewController: UIViewController;
+//        let window = UIWindow(frame: UIScreen.main.bounds)
+//
+//        if Auth.auth().currentUser != nil {
+//          // User is signed in.
+//            viewController = storyboard.instantiateViewController(withIdentifier: "SearchVC")
+//        } else {
+//          // No user is signed in.
+//            viewController = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController")
+//        }
+//        (withIdentifier: "WelcomeViewController")
+//        if Auth.auth().currentUser != nil {
+//            window.rootViewController = SearchVC()
+//        } else {
+//            window.rootViewController = UINavigationController(rootViewController: WelcomeViewController())
+//        }
+//        self.window = window
+//        self.window?.rootViewController = viewController
+//        self.window?.makeKeyAndVisible()
