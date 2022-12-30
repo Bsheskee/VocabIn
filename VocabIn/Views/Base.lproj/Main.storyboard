@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pLB-MD-Qpr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="neH-En-Vzh">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -11,7 +11,7 @@
         <!--WelcomeViewController-->
         <scene sceneID="rjk-Qj-3ol">
             <objects>
-                <viewController storyboardIdentifier="WelcomeViewController" title="WelcomeViewController" id="ezX-C5-4wV" customClass="WelcomeViewController" customModule="VocabIn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeViewController" title="WelcomeViewController" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ezX-C5-4wV" customClass="WelcomeViewController" customModule="VocabIn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rp7-Yd-I1N">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -164,12 +164,12 @@
                     <connections>
                         <outlet property="emailTextfield" destination="mOK-bI-HnJ" id="rHz-S9-u4k"/>
                         <outlet property="passwordTextfield" destination="34K-wy-QUT" id="U0R-Eq-5l2"/>
-                        <segue destination="2hx-IB-E1q" kind="show" identifier="goToDictionary" id="XPJ-4J-nrS"/>
+                        <segue destination="2hx-IB-E1q" kind="show" identifier="goToDictionary" id="e3G-ZV-R5h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QcA-iP-gaS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2953.8461538461538" y="-659.00473933649289"/>
+            <point key="canvasLocation" x="5723.0769230769229" y="-659.00473933649289"/>
         </scene>
         <!--Review-->
         <scene sceneID="HFq-1v-Vgl">
@@ -239,7 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3dB-aR-SV3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5809.2307692307686" y="-658.29383886255926"/>
+            <point key="canvasLocation" x="8595.3846153846152" y="-658.29383886255926"/>
         </scene>
         <!--Choose set-->
         <scene sceneID="8VY-y5-LBL">
@@ -297,7 +297,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9yN-Cu-QfI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6756.9230769230771" y="-659.00473933649289"/>
+            <point key="canvasLocation" x="9544.6153846153848" y="-659.00473933649289"/>
         </scene>
         <!--Remider settings-->
         <scene sceneID="GM2-1A-gkn">
@@ -377,7 +377,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vi0-vd-SDo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7652.3076923076924" y="-659.00473933649289"/>
+            <point key="canvasLocation" x="10440" y="-659.00473933649289"/>
         </scene>
         <!--Tags-->
         <scene sceneID="4wx-aA-KhT">
@@ -442,7 +442,7 @@
         <!--HomeView-->
         <scene sceneID="YRi-M0-wIg">
             <objects>
-                <viewController title="Home" modalPresentationStyle="fullScreen" id="eGP-qt-7Jq" userLabel="HomeView" customClass="HomeVC" customModule="VocabIn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home" modalPresentationStyle="overFullScreen" id="eGP-qt-7Jq" userLabel="HomeView" customClass="HomeVC" customModule="VocabIn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zYr-8t-Yao">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -547,7 +547,13 @@
                             <constraint firstItem="sIV-dh-5tg" firstAttribute="top" secondItem="YsL-Hs-xCY" secondAttribute="top" id="zBk-SM-oHc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" style="browser" id="g3r-kJ-cGg"/>
+                    <navigationItem key="navigationItem" style="browser" id="g3r-kJ-cGg">
+                        <barButtonItem key="rightBarButtonItem" title="Log out" id="bLJ-kC-0nN">
+                            <connections>
+                                <action selector="logOutPressed:" destination="eGP-qt-7Jq" id="RhM-Te-eJe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="32t-h4-q5N" id="tO8-X7-Q5X"/>
                         <outlet property="tableView" destination="sIV-dh-5tg" id="4w0-8g-4qz"/>
@@ -555,7 +561,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BWX-Kp-Cgl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4867.6923076923076" y="-659.00473933649289"/>
+            <point key="canvasLocation" x="7655.3846153846152" y="-659.00473933649289"/>
         </scene>
         <!--Settings-->
         <scene sceneID="GaS-ao-tao">
@@ -586,7 +592,7 @@
         <!--Searchview-->
         <scene sceneID="a9S-c4-cRE">
             <objects>
-                <viewController storyboardIdentifier="SearchVC" title="Searchview" id="2hx-IB-E1q" userLabel="Searchview" customClass="SearchVC" customModule="VocabIn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchVC" title="Searchview" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2hx-IB-E1q" userLabel="Searchview" customClass="SearchVC" customModule="VocabIn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aF4-ls-QY3">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -693,7 +699,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eUU-zy-3fM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3883.0769230769229" y="-658.29383886255926"/>
+            <point key="canvasLocation" x="6669.2307692307686" y="-658.29383886255926"/>
         </scene>
         <!--Webview-->
         <scene sceneID="CVQ-gQ-rA2">
@@ -790,22 +796,23 @@
             <point key="canvasLocation" x="2025" y="82"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="b0A-F0-yml">
+        <scene sceneID="a2c-9E-TD4">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pLB-MD-Qpr" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overFullScreen" id="neH-En-Vzh" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="47y-1K-QuW">
+                    <navigationItem key="navigationItem" id="iwE-SB-HQH"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aFx-a7-ZG0">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="ezX-C5-4wV" kind="relationship" relationship="rootViewController" id="qtQ-dp-esc"/>
+                        <segue destination="ezX-C5-4wV" kind="relationship" relationship="rootViewController" id="a8K-Hf-V8e"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dZy-mb-ugj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SVc-iV-njy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2024.6153846153845" y="-659.00473933649289"/>
+            <point key="canvasLocation" x="4793.8461538461534" y="-659.00473933649289"/>
         </scene>
     </scenes>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -28,16 +28,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
            window = UIWindow()
     
            if Auth.auth().currentUser != nil {
-               print("Current user = \(Auth.auth().currentUser)")
-               let mainViewController = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController")
+//               print("Current user = \(Auth.auth().currentUser)")
+               let mainViewController = UINavigationController.init(rootViewController: storyboard.instantiateViewController(withIdentifier: "SearchVC"))
                initialViewController = mainViewController
            } else {
-               let loginViewController = storyboard.instantiateViewController(withIdentifier: "SearchVC")
+               let loginViewController = UINavigationController.init(rootViewController: storyboard.instantiateViewController(withIdentifier: K.welcomeVC))
                initialViewController = loginViewController
            }
            window?.rootViewController = initialViewController
            window?.makeKeyAndVisible()
        }
+//    storyboard.instantiateViewController(withIdentifier: "SearchVC")
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

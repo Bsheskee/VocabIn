@@ -16,14 +16,21 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var passwordTextfield: UITextField!
     
     
+//    override func viewDidAppear(_ animated: Bool) {
+//        checkUserInfo()
+//        print("viewDidAppear")
+//    }
+    
     @IBAction func loginPressed(_ sender: UIButton) {
         if let email = emailTextfield.text, let password = passwordTextfield.text {
-            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+                
                 if let e = error {
                     print(e.localizedDescription)
                 } else {
-                    self.performSegue(withIdentifier: K.signInSegue, sender: self)
+                    self?.performSegue(withIdentifier: K.signInSegue, sender: self)
                 }
+//                self?.checkUserInfo()
             }
         }
     }
@@ -34,20 +41,22 @@ class WelcomeViewController: UIViewController {
                 print(e.localizedDescription)
             } else {
                 self.performSegue(withIdentifier: K.signInSegue, sender: self)
-                AuthManager.shared.isSignedIn = true
                
             }
             }
         }
     }
+    func checkUserInfo() {
+        if Auth.auth().currentUser != nil {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "SearchVC")
+            vc.modalPresentationStyle = .overFullScreen
+            present(vc, animated: true)
+        }
+    }
+    
     
     
 }
 
-final class AuthManager {
-    static let shared = AuthManager()
-    
-    private init() {}
-    
-    var isSignedIn = false
-}
+
