@@ -308,7 +308,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iwq-OH-IOM" userLabel="Top Stack">
-                                <rect key="frame" x="45" y="111" width="315" height="50"/>
+                                <rect key="frame" x="45" y="67" width="315" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remind me if words were not revised  for " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2K-bS-TLg">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
@@ -337,7 +337,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nif-BK-mcN" userLabel="MiddleStack">
-                                <rect key="frame" x="45" y="251" width="315" height="50"/>
+                                <rect key="frame" x="45" y="207" width="315" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review learnd if not revised for" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jge-u4-Cb0">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
@@ -388,7 +388,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="Find your tag" translatesAutoresizingMaskIntoConstraints="NO" id="zvC-jn-0Es">
-                                <rect key="frame" x="38" y="91" width="314" height="56"/>
+                                <rect key="frame" x="38" y="47" width="314" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter tag name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yGE-55-x4i">
@@ -407,7 +407,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vSD-cc-BYm">
-                                <rect key="frame" x="0.0" y="147" width="390" height="544"/>
+                                <rect key="frame" x="0.0" y="103" width="390" height="588"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -448,7 +448,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sIV-dh-5tg" userLabel="tableView">
-                                <rect key="frame" x="0.0" y="91" width="390" height="624"/>
+                                <rect key="frame" x="0.0" y="47" width="390" height="668"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="o3b-Ab-Vxj">
@@ -557,11 +557,12 @@
                     <connections>
                         <outlet property="searchBar" destination="32t-h4-q5N" id="tO8-X7-Q5X"/>
                         <outlet property="tableView" destination="sIV-dh-5tg" id="4w0-8g-4qz"/>
+                        <segue destination="ezX-C5-4wV" kind="show" identifier="WelcomeViewController" id="fyd-mI-408"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BWX-Kp-Cgl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7655.3846153846152" y="-659.00473933649289"/>
+            <point key="canvasLocation" x="7588" y="-658"/>
         </scene>
         <!--Settings-->
         <scene sceneID="GaS-ao-tao">
@@ -598,7 +599,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="A3w-va-ezK">
-                                <rect key="frame" x="0.0" y="91" width="390" height="624"/>
+                                <rect key="frame" x="0.0" y="47" width="390" height="668"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="tB0-nO-8RO">
@@ -815,6 +816,9 @@
             <point key="canvasLocation" x="4793.8461538461534" y="-659.00473933649289"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="fyd-mI-408"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="Image" width="341.33334350585938" height="341.33334350585938"/>

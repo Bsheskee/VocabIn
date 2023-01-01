@@ -41,7 +41,6 @@ class WelcomeViewController: UIViewController {
                 print(e.localizedDescription)
             } else {
                 self.performSegue(withIdentifier: K.signInSegue, sender: self)
-               
             }
             }
         }

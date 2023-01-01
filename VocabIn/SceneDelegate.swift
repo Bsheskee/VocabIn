@@ -15,8 +15,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
   
-        guard let _ = (scene as? UIWindowScene) else { return }
-        appDelegate.configureInitialViewController()
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+
+        window = UIWindow(windowScene: windowScene)
+
+        let initialViewController: UIViewController
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if Auth.auth().currentUser != nil {
+                let searchVC = UINavigationController(rootViewController: storyboard.instantiateViewController(withIdentifier: "SearchVC"))
+                initialViewController = searchVC
+            } else {
+                let welcomeVC = UINavigationController(rootViewController: storyboard.instantiateViewController(withIdentifier: K.welcomeVC))
+                initialViewController = welcomeVC
+            }
+        // Make sure you set an Storyboard ID for the view controller you want to instantiate
+        window?.rootViewController = initialViewController
+        window?.makeKeyAndVisible()
 
         
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.

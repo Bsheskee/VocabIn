@@ -18,19 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-
-          // In project directory storyboard looks like Main.storyboard,
-          // you should use only part before ".storyboard" as its name,
-          // so in this example name is "Main".
-          let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-          
-          // controller identifier sets up in storyboard utilities
-          // panel (on the right), it is called 'Storyboard ID'
-          let viewController = storyboard.instantiateViewController(withIdentifier: "SearchVC") as! SearchVC
-
-          self.window?.rootViewController = viewController
-          self.window?.makeKeyAndVisible()
+    
         
         return true
     }

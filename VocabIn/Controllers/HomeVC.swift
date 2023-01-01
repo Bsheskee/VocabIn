@@ -19,8 +19,8 @@ class HomeVC: UIViewController {
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
-//            performSegue(withIdentifier: K.welcomeVC, sender: self)
-            navigationController?.popToRootViewController(animated: true)
+            performSegue(withIdentifier: K.welcomeVC, sender: self)
+//            navigationController?.popToRootViewController(animated: true)
         } catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)
         }
