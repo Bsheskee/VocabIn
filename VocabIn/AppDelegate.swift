@@ -7,7 +7,6 @@
 
 import UIKit
 import FirebaseCore
-import FirebaseAuth
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,29 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
-        
     
-        
         return true
     }
 
-    func configureInitialViewController() {
-           let initialViewController: UIViewController
-           let storyboard = UIStoryboard(name: "Main", bundle: nil)
-
-           window = UIWindow()
-    
-           if Auth.auth().currentUser != nil {
-//               print("Current user = \(Auth.auth().currentUser)")
-               let mainViewController = UINavigationController.init(rootViewController: storyboard.instantiateViewController(withIdentifier: "SearchVC"))
-               initialViewController = mainViewController
-           } else {
-               let loginViewController = UINavigationController.init(rootViewController: storyboard.instantiateViewController(withIdentifier: K.welcomeVC))
-               initialViewController = loginViewController
-           }
-           window?.rootViewController = initialViewController
-           window?.makeKeyAndVisible()
-       }
 //    storyboard.instantiateViewController(withIdentifier: "SearchVC")
     // MARK: UISceneSession Lifecycle
 
@@ -58,19 +38,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
-
-//let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//window = UIWindow()
-//
-//if Auth.auth().currentUser != nil {
-//    print(Auth.auth().currentUser)
-////            let searchVC: UIViewController
-//    let mainVC = storyboard.instantiateViewController(withIdentifier: "SearchVC")
-//    window?.rootViewController = mainVC
-//} else {
-////            window = UIWindow(frame: UIScreen.main.bounds)
-//
-//    window!.rootViewController = UINavigationController(rootViewController: WelcomeViewController())
-//}
-//
-//window?.makeKeyAndVisible()

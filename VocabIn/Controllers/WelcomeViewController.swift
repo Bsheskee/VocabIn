@@ -16,10 +16,6 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var passwordTextfield: UITextField!
     
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        checkUserInfo()
-//        print("viewDidAppear")
-//    }
     
     @IBAction func loginPressed(_ sender: UIButton) {
         if let email = emailTextfield.text, let password = passwordTextfield.text {
@@ -30,7 +26,6 @@ class WelcomeViewController: UIViewController {
                 } else {
                     self?.performSegue(withIdentifier: K.signInSegue, sender: self)
                 }
-//                self?.checkUserInfo()
             }
         }
     }
@@ -45,17 +40,20 @@ class WelcomeViewController: UIViewController {
             }
         }
     }
-    func checkUserInfo() {
-        if Auth.auth().currentUser != nil {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "SearchVC")
-            vc.modalPresentationStyle = .overFullScreen
-            present(vc, animated: true)
-        }
-    }
+
     
     
     
 }
 
 
+
+
+//func checkUserInfo() {
+//    if Auth.auth().currentUser != nil {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "SearchVC")
+//        vc.modalPresentationStyle = .overFullScreen
+//        present(vc, animated: true)
+//    }
+//}
