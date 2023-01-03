@@ -15,7 +15,10 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var passwordTextfield: UITextField!
     
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationItem.hidesBackButton = true
+    }
     
     @IBAction func loginPressed(_ sender: UIButton) {
         if let email = emailTextfield.text, let password = passwordTextfield.text {

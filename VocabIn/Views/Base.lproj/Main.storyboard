@@ -308,7 +308,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iwq-OH-IOM" userLabel="Top Stack">
-                                <rect key="frame" x="45" y="67" width="315" height="50"/>
+                                <rect key="frame" x="45" y="111" width="315" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remind me if words were not revised  for " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2K-bS-TLg">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
@@ -337,7 +337,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nif-BK-mcN" userLabel="MiddleStack">
-                                <rect key="frame" x="45" y="207" width="315" height="50"/>
+                                <rect key="frame" x="45" y="251" width="315" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review learnd if not revised for" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jge-u4-Cb0">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
@@ -373,7 +373,7 @@
                             <constraint firstItem="iwq-OH-IOM" firstAttribute="leading" secondItem="p8J-ix-7VD" secondAttribute="leading" constant="45" id="oa6-Po-kSZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="rqF-cl-Nb7"/>
+                    <navigationItem key="navigationItem" style="editor" id="rqF-cl-Nb7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vi0-vd-SDo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -388,7 +388,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="Find your tag" translatesAutoresizingMaskIntoConstraints="NO" id="zvC-jn-0Es">
-                                <rect key="frame" x="38" y="47" width="314" height="56"/>
+                                <rect key="frame" x="38" y="91" width="314" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter tag name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yGE-55-x4i">
@@ -407,7 +407,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vSD-cc-BYm">
-                                <rect key="frame" x="0.0" y="103" width="390" height="588"/>
+                                <rect key="frame" x="0.0" y="147" width="390" height="544"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -431,13 +431,13 @@
                             <constraint firstItem="jGE-Ta-9md" firstAttribute="trailing" secondItem="vSD-cc-BYm" secondAttribute="trailing" id="xCE-le-9Et"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="QFQ-mq-dwj">
+                    <navigationItem key="navigationItem" style="editor" id="QFQ-mq-dwj">
                         <barButtonItem key="backBarButtonItem" title=" " id="Id5-87-vWZ"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7JZ-OV-3xc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3008.6956521739135" y="81.026785714285708"/>
+            <point key="canvasLocation" x="7588" y="161"/>
         </scene>
         <!--HomeView-->
         <scene sceneID="YRi-M0-wIg">
@@ -448,7 +448,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sIV-dh-5tg" userLabel="tableView">
-                                <rect key="frame" x="0.0" y="47" width="390" height="668"/>
+                                <rect key="frame" x="0.0" y="91" width="390" height="624"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="o3b-Ab-Vxj">
@@ -547,8 +547,9 @@
                             <constraint firstItem="sIV-dh-5tg" firstAttribute="top" secondItem="YsL-Hs-xCY" secondAttribute="top" id="zBk-SM-oHc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" style="browser" id="g3r-kJ-cGg">
+                    <navigationItem key="navigationItem" style="editor" id="g3r-kJ-cGg">
                         <barButtonItem key="rightBarButtonItem" title="Log out" id="bLJ-kC-0nN">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="logOutPressed:" destination="eGP-qt-7Jq" id="RhM-Te-eJe"/>
                             </connections>
@@ -584,11 +585,11 @@
                             <constraint firstItem="wlL-H3-JbP" firstAttribute="trailing" secondItem="Kas-jD-Adg" secondAttribute="trailing" id="JJR-0A-hEt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="LWk-4T-BBt"/>
+                    <navigationItem key="navigationItem" style="editor" id="LWk-4T-BBt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kGQ-4k-YdW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3953" y="82"/>
+            <point key="canvasLocation" x="8595" y="161"/>
         </scene>
         <!--Searchview-->
         <scene sceneID="a9S-c4-cRE">
@@ -599,7 +600,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="A3w-va-ezK">
-                                <rect key="frame" x="0.0" y="47" width="390" height="668"/>
+                                <rect key="frame" x="0.0" y="91" width="390" height="624"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="tB0-nO-8RO">
@@ -692,7 +693,7 @@
                             <constraint firstItem="n07-ET-FeC" firstAttribute="top" secondItem="A3w-va-ezK" secondAttribute="bottom" constant="45" id="xfu-Yu-g78"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Dictionary" id="s32-S0-4ZT"/>
+                    <navigationItem key="navigationItem" title="Dictionary" style="editor" id="s32-S0-4ZT"/>
                     <connections>
                         <outlet property="searchPressed" destination="kfB-Fu-9P5" id="iJ1-KJ-Teu"/>
                         <outlet property="tableView" destination="A3w-va-ezK" id="Gn6-mA-tVC"/>
@@ -794,17 +795,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="StD-zc-D3U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2025" y="82"/>
+            <point key="canvasLocation" x="6669" y="161"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a2c-9E-TD4">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overFullScreen" id="neH-En-Vzh" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="iwE-SB-HQH"/>
+                    <navigationItem key="navigationItem" style="editor" id="iwE-SB-HQH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aFx-a7-ZG0">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="systemBackgroundColor"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -817,7 +820,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fyd-mI-408"/>
+        <segue reference="a8K-Hf-V8e"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>

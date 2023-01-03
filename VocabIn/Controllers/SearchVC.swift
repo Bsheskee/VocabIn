@@ -27,6 +27,7 @@ class SearchVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.hidesBackButton = true
         tableView.register(UINib(nibName: "FirstDefinitionCell", bundle: nil), forCellReuseIdentifier: "FirstDefinitionCell")
         tableView.register(UINib(nibName: "DefExampleCell", bundle: nil), forCellReuseIdentifier: "DefExampleCell")
         tableView.register(UINib(nibName: "DefinitionCell", bundle: nil), forCellReuseIdentifier: "DefinitionCell")
